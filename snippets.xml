@@ -15,7 +15,7 @@
   </category>
   <category name="dotnet">
     <snippet name="add-nuget">
-      dotnet add &lt;project&gt; package &lt;package&gt;
+      dotnet add {{&lt;project&gt;}} package {{&lt;package&gt;}}
     </snippet>
   </category>
 </snippets>

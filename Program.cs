@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
 
 namespace Snippet
 {
@@ -93,6 +90,7 @@ or run snippet <category> for a list of snippets for that category");
                 Console.SetCursorPosition(0, top);
                 if (key.Key == ConsoleKey.Escape)
                 {
+                    Console.WriteLine();
                     throw new Exception("Exiting...");
                 }
                 else if (key.Key == ConsoleKey.Enter)
