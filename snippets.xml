@@ -1,0 +1,10 @@
+﻿<snippets>
+  <category name="git">
+    <snippet name="checkout-remote">
+      git checkout --track {{origin}}/{{&lt;branch&gt;}}
+    </snippet>
+    <snippet name="refresh-remote">
+      git remote update {{origin}} --prune
+    </snippet>
+  </category>
+</snippets>

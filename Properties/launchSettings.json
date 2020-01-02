@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Snippet": {
+      "commandName": "Project",
+      "commandLineArgs": "git checkout-remote"
+    }
+  }
+}
