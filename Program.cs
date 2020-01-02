@@ -71,7 +71,7 @@ or run snippet <category> for a list of snippets for that category");
                 .ToDictionary(x => x.localIndex, x => x.globalIndex);
 
             var activeIndex = 0;
-            var active = segments.First(seg => seg is InputSegment) as InputSegment;
+            var active = segments.FirstOrDefault(seg => seg is InputSegment) as InputSegment;
             if (active != null)
             {
                 active.Active = true;
@@ -86,7 +86,7 @@ or run snippet <category> for a list of snippets for that category");
                     text += new string(' ', len - text.Length);
                 }
                 Console.Write(text);
-                var offset = string.Join("", segments.TakeWhile(s => s != active).Select(s => s.Value)).Length + active.Pos;
+                var offset = active != null ? string.Join("", segments.TakeWhile(s => s != active).Select(s => s.Value)).Length + active.Pos : 0;
                 len = text.Length;
                 Console.SetCursorPosition(offset, top);
                 var key = Console.ReadKey(true);

@@ -2,7 +2,7 @@
   "profiles": {
     "Snippet": {
       "commandName": "Project",
-      "commandLineArgs": "git checkout-remote"
+      "commandLineArgs": "dotnet add-nuget"
     }
   }
 }
