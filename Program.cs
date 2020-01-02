@@ -47,6 +47,8 @@ or run snippet <category> for a list of snippets for that category");
                     throw new Exception($"No such snippet: {args[1]}, run \"snippets {args[0]}\" to list snippets");
                 }
 
+                Term.EnableVirtualMode();
+
                 var finalSnippet = EditSnippet(snippet.Trim());
                 TextCopy.Clipboard.SetText(finalSnippet);
                 Console.WriteLine($"Copied {finalSnippet} into clipboard");
