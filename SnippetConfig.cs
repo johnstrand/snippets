@@ -13,7 +13,8 @@ namespace Snippet
         public static List<SnippetCategory> Load()
         {
             var s = new XmlSerializer(typeof(SnippetConfig));
-            using var file = File.OpenRead("snippets.xml");
+            var currentDirectory = Path.GetDirectoryName(typeof(SnippetConfig).Assembly.Location);
+            using var file = File.OpenRead(Path.Combine(currentDirectory, "snippets.xml"));
             var config = (SnippetConfig)s.Deserialize(file);
             return config.SnippetCategories;
         }
