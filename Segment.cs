@@ -108,6 +108,16 @@ namespace Snippet
             {
                 Pos = Math.Min(Value.Length, Pos + 1);
             }
+            else if (keyInfo.Key == ConsoleKey.V && keyInfo.Modifiers == ConsoleModifiers.Control)
+            {
+                if (firstInput)
+                {
+                    firstInput = false;
+                    Value = "";
+                }
+                Value += TextCopy.Clipboard.GetText();
+                Pos = Value.Length;
+            }
             else
             {
                 var k = keyInfo.KeyChar;
@@ -122,7 +132,6 @@ namespace Snippet
                     if (Pos == 0)
                     {
                         Value = "";
-                        Pos = 0;
                     }
                 }
                 Value = Value.Insert(Pos, k.ToString());
