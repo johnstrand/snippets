@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "Snippet": {
-      "commandName": "Project",
-      "commandLineArgs": "dotnet add-nuget"
-    }
-  }
-}
