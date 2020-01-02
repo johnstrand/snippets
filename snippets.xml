@@ -6,9 +6,16 @@
     <snippet name="refresh-remote">
       git remote update {{origin}} --prune
     </snippet>
-    <snippet name="push-existing-github">
-      git remote add origin git@github.com:{{account}}/{{repo}}.git
-      git push -u origin {{master}}
+    <snippet name="add-existing-github">
+      git remote add {{origin}} git@github.com:{{account}}/{{repo}}.git
+    </snippet>
+    <snippet name="push-set-upstream">
+      git push -u {{origin}} {{master}}
+    </snippet>
+  </category>
+  <category name="dotnet">
+    <snippet name="add-nuget">
+      dotnet add &lt;project&gt; package &lt;package&gt;
     </snippet>
   </category>
 </snippets>
