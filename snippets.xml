@@ -6,5 +6,9 @@
     <snippet name="refresh-remote">
       git remote update {{origin}} --prune
     </snippet>
+    <snippet name="push-existing-github">
+      git remote add origin git@github.com:{{account}}/{{repo}}.git
+      git push -u origin {{master}}
+    </snippet>
   </category>
 </snippets>
