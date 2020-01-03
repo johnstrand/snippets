@@ -49,7 +49,9 @@ or run snippet <category> for a list of snippets for that category");
 
                 Term.EnableVirtualMode();
 
-                var finalSnippet = EditSnippet(snippet.Trim());
+                Console.WriteLine("Press tab to toggle between fields, enter to copy text into clipboard and escape to exit");
+
+                var finalSnippet = EditSnippet(" > " + snippet.Trim());
                 TextCopy.Clipboard.SetText(finalSnippet);
                 Console.WriteLine($"Copied {finalSnippet} into clipboard");
             }
