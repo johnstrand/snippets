@@ -18,4 +18,9 @@
       dotnet add {{&lt;project&gt;}} package {{&lt;package&gt;}}
     </snippet>
   </category>
+  <category name="docker">
+    <snippet name="sqlserver">
+      docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=fymP3tkmU66qJ47w" -p 1433:1433 --name {{name}} -v c:\volumes\{{name}}:/var/opt/mssql -d mcr.microsoft.com/mssql/server:{{latest}}
+    </snippet>
+  </category>
 </snippets>
